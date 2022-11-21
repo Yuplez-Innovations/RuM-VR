@@ -18,7 +18,6 @@ exports.getEachFolder = async (req, res) => {
         try {
 
             const folders = await fs.readdirSync(path.join(__dirname, `../Resources/${folder.name}`))
-            console.log("🚀 ~ file: folder.controller.js ~ line 21 ~ exports.getEachFolder= ~ folders", folders)
             res.json({ ...folder, files: folders })
         } catch (error) {
             res.json({ ...folder, files: [] })
@@ -44,7 +43,7 @@ exports.createFolder = async (req, res) => {
     const user = await User.create({
         id_user,
         name: name,
-        email: name + '@randm.com',
+        email: name.re + '@randm.com',
         password: hash
     })
 

@@ -53,6 +53,7 @@ function App() {
               <Route path="*" element={<Navigate to={`/login`} />} />
             </>
           )}
+          <Route path="*" element={<div>404</div>} />
         </Routes>
       </div>
     </Router>
